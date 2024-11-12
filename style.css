@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+.rampart-one-regular {
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+ h1{
+    font-family: "Rampart One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);;
+ }
+  
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+    background: radial-gradient(circle, rgba(195,205,255,1) 0%, rgba(255,123,150,1) 100%);
+}
+
+.card.flip {
+    transform: rotateY(0);
+    background: none; /* Remove o gradiente ao virar */
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+}
+
+.card .pokemon-image {
+    display: none;
+}
+
+.card.flip .pokemon-image {
+    display: block; /* Exibe a imagem do Pokémon ao virar */
+}
+
+.card .pokeball {
+    display: block; /* Exibe a Pokébola quando a carta não foi virada */
+}
+
+.card.flip .pokeball {
+    display: none; /* Esconde a Pokébola ao virar a carta */
+}
+
+body {
+    background-image: url('https://wallpapercave.com/wp/BXaygYm.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Cobre toda a tela */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    
+}
